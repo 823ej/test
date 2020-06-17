@@ -1,0 +1,21 @@
+
+        #columns cards{
+                font-size: 1.2rem;
+                width:350px;
+                display: inline-block;
+                border:0.1px solid rgba(0,0,0,0.2);
+                margin:0;
+                margin-bottom: 10px;
+                padding:10px;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.3);;
+              }
+           
+          
+          
+        
+     
+       
+        .centerA {
+            text-align: center;
+        }
+       
