@@ -1,7 +1,7 @@
  $(document).ready(function(){
-$(document).on('click', 'cards a', function(event){
+$(document).on('click', '.cards a', function(event){
 history.pushState(null, null, event.target.href);
-$('cards').load(event.target.href);
+$('.cards').load(event.target.href+' .card');
 event.preventDefault();
 })
  });
