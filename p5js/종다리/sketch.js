@@ -1,14 +1,11 @@
-let tts1, tts2;
 function preload(){
-  img1 = loadImage('text.png');
-  img2 = loadImage('text2.png');
-  tts1 = loadSound('tts1.mp3');
-  tts2 = loadSound('tts2.mp3');
+  img1 = loadImage('https://github.com/823ej/test/blob/master/p5js/%EC%A2%85%EB%8B%A4%EB%A6%AC/text.png');
+  img2 = loadImage('https://github.com/823ej/test/blob/master/p5js/%EC%A2%85%EB%8B%A4%EB%A6%AC/text2.png');
+  //  tts1 = loadSound('tts1.mp3');
+  //  tts2 = loadSound('tts2.mp3');
 }
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
-//  easycam = createEasyCam();
-
 }
 
 function draw() {
