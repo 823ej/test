@@ -1,20 +1,33 @@
-let img;
-
+let tts1, tts2;
+function preload(){
+  img1 = loadImage('text.png');
+  img2 = loadImage('text2.png');
+  tts1 = loadSound('tts1.mp3');
+  tts2 = loadSound('tts2.mp3');
+}
 function setup() {
-  createCanvas(710, 400, WEBGL);
-  img = loadImage('assets/text.png');
+  createCanvas(windowWidth, windowHeight, WEBGL);
+//  easycam = createEasyCam();
+
 }
 
 function draw() {
-  background(100);
+  background(255);
   orbitControl();
-  normalMaterial();
-  noStroke();
-  fill(255);
-push();
- translate(0,0,0);
-// texture(img);
- plane(710, 400);
-pop();
+   // rotateY(frameCount * 0.01);
+  //rotateY(-((mouseX)*0.00205));
+
+    push();
+ rotateY(61.26105);
+  texture(img1);
+  plane((windowWidth), (windowHeight));
+  pop();
+
+  push();
+ rotateY(61.26105);
+translate(0,0,-0.01);
+  texture(img2);
+  plane((windowWidth), (windowHeight));
+  pop();
 
 }
