@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<!--자기가 원하는 제목으로 수정-->
+<title>Communication is a Miracle!</title>
+
+<head>
+    <!--이부분은 필요한 경우가 아니면 수정하지마세요.-->
+    <meta charset="utf-8"> <!--utf-8인코딩-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> <!--모바일과 PC에서 보여지는 크기가 동일하도록 설정, 더블터치로 확대 안되도록 설정-->
+    <link rel="stylesheet" href="style.css"> 
+    <!--
+    위는 자신이 별도로 css 파일을 만들어 적용한다면, 혹은 프로젝트별로 다른 스타일을 적용한다면 수정해야할 부분입니다.
+    프로젝트별로 다른 스타일을 지정한다면, 프로젝트별로 다른 css 파일을 만들어서 사용하거나, style.css 내에서 프로젝트별로 클래스이름과 스타일을 새로 지정해주고 html 엘리먼트에 적용된 클래스이름도 그에 맞추어 수정하면 됩니다. 
+    -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!--jquery는 기본으로 적혀있는 스크립트에서 임베드 동영상의 비율을 조정하는데 사용하고 있습니다.-->
+
+    <!--폰트는 영문 : Space Grotesk 한글 : Gothic A1 사용-->
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"> <!--폰트는 지정된 것을 사용해주세요-->
+    <!--이부분은 필요한 경우가 아니면 수정하지마세요.-->
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="header">
+            <ul class="headerWrap wrapper clearfix">
+
+                <!--좌측 헤더는 수정하지 마세요-->
+
+                <li class="headerLeft">
+                    <a class="headerLeft_li1" href="../../index.html"><img src="img/symbol.png"></a> <!--메인 페이지로 돌아가는 기능. 배경을 블랙으로 사용시 "img/symbol_white.png"로 경로 대체하세요.-->
+                    <a class="headerLeft_li2">2020 서울시립대학교 시각디자인전공 졸업전시회<br>Cake Under Cake Under Cake Under…</a>
+                </li>
+
+                <!--
+                우측 헤더는 자신 작품 개수에 맞게 수정하세요.
+                1. img 폴더에 있는 icon.png는 자신이 워크샵때 사용한 이미지를 331px * 331px 크기의 png로 만들어서 대체하세요.
+                2. 우측 헤더는 학생 A의 작품 페이지에서 다시 메인으로 이동하지 않고 학생 A의 다른 작품을 볼 수 있게 해주는 내비게이션 입니다. 자신의 1번 프로젝트에서 1번을 제외한 나머지 프로젝트, 2번 프로젝트에서는 2번을 제외한 나머지 프로젝트에 대한 링크가 있어야합니다.
+                -->
+
+                <li class="headerRight">
+                    <a href="./proj2.html"><img src="img/icon.png"></a> <!--2번째 프로젝트-->
+                    <a href="./proj3.html"><img src="img/icon.png"></a> <!--3번째 프로젝트-->
+                    <!--
+                    4개의 프로젝트가 있을 경우, 아래와 같은 코드를 적어주고 proj4.html을 만들어주세요.
+                    proj4.html의 우측헤더는 proj1.html, proj2.html, proj3.html에 대한 링크가 필요할 것.
+                    <a href="./proj4.html"><img src="img/icon.png"></a>
+                    -->
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="title clearfix">
+        <div class="titleWrap wrapper clearfix">
+
+            <!--프로젝트명과 자기소개 부분-->
+
+            <div class="project col-4">
+                <p class="projectName">Communication is a Miracle!</p>
+                <ul class="personal">
+                    <li><a>김은정, Kim Eunjeong</a></li> <!--이름-->
+                    <li><a>823kej@gmail.com</a></li> <!--메일-->
+                    <!--인스타그램, 비핸스, 포트폴리오 사이트 등 링크-->
+                    <li><a href="https://www.instagram.com/momomojito098/?hl=ko">@momomojito098</a></li>
+                    <!--
+                    특정 링크를 추가로 넣어주고 싶다면 위와 같이 넣어주시면 됩니다. 주소 앞의 "https://", 혹은 "http://" 부분에도 유의해서 넣어주세요. 
+                    -->
+                </ul>
+            </div>
+
+            <!--설명 부분-->
+
+            <ul class="description col-8">
+
+                <p class="desContent">사고로 우주를 떠돌게 된 우주 비행사의 수첩이 풋내기 마법사 앞에 나타난다. 절대 만날 수 없었을 두 사람의 우연한 접촉을 그린 일러스트레이션 연작을 통해 소통은 기적이라는 주제를 전하고자 했다.  </p>
+
+                <!--설명을 추가하거나 작품 관련 외부링크나 기타 텍스트를 추가할 경우 여기에 작성해주세요.-->
+
+            </ul>
+
+        </div>
+    </div>
+
+
+    <!--IMAGE 컨텐츠 영역-->
+    <div class="contents clearfix">
+        <div class="contents_wrap wrapper clearfix">
+
+            <!--
+            1번 프로젝트의 이미지는 p1_img 폴더에,
+            2번 프로젝트의 이미지는 p2_img 폴더에,
+            3번 프로젝트의 이미지는 p3_img 폴더에,
+            ... (4번째 프로젝트가 있을 경우 새로 폴더를 만들어주어야 합니다.)
+            -->
+            <div class="columns">
+                <figure>
+                    <img src="img/p1_img/우주인1.png">
+                </figure>
+            
+               
+                    <figcaption>
+                    경고: 현재 속도 기준으로 600초 내에 탈출 불가 지점에 진입합니다
+                    </figcaption>
+               
+                
+                <figure>
+                    <img src="img/p1_img/우주인2.png">
+                </figure>
+
+            
+            <figcaption>
+            아무도 나를 기억해 주지 않겠지
+            </figcaption>
+           
+
+            <figure>
+            <img src="img/p1_img/우주인3.png">
+            </figure>
+           
+            <figcaption>
+                어?
+            </figcaption>
+        
+            <figure>
+            <img src="img/p1_img/우주인4.png">
+            </figure>
+            
+            <figcaption>
+                아무도 안 읽을 걸 알지만
+            </figcaption>
+           
+        
+            <figure>
+            <img src="img/p1_img/우주인5.png">
+            
+            </figure>
+            
+          
+            <figcaption>
+                안녕!
+            </figcaption>
+       
+
+       
+
+            <figure>
+            <img src="img/p1_img/호수코랄1.png"> 
+             
+            </figure>
+            
+            <figcaption>
+                세상에 나 혼자 있는 것처럼 느껴져
+            </figcaption>
+         
+           
+            <figure>
+            <img src="img/p1_img/호수코랄2.png"> 
+            </figure>
+            <figcaption>
+                누구든 좋으니까 제발 도와줘
+            </figcaption>
+        
+            <figure>
+                
+            <img src="img/p1_img/호수코랄3.png">
+            </figure>
+            
+            <figure>
+            <figcaption>어?</figcaption>
+        </figure>
+
+            <figure>
+               
+            <img src="img/p1_img/호수코랄4.png"> 
+            </figure>
+            
+           
+            <figcaption>누가 이런 걸 쓴 거지?</figcaption>
+     
+            <figure>
+              
+            <img src="img/p1_img/호수코랄5.png">  
+            </figure>
+
+            <figure>
+            <figcaption>안녕?</figcaption>
+        </figure>
+ 
+        </div>
+            <!--
+            영상 링크를 불러올때 사용해주세요.
+            1. 유튜브나 비메오에서 공유를 누르면 나오는 임베드 코드를 아래처럼 그대로 복사해서 적어주고, class="frame"을 추가해주세요.
+            2. 임베드 코드에서 width="" height=""에 적혀있는 값을 자신의 영상 비율에 맞는 값으로 입력해줍니다. (비율에 맞는 값이란, 이를테면 자신의 영상 가로세로 너비가 640 * 360 일 경우, 정확히 그 숫자와 값이 일치하지 않더라도 비율만 일치하면 된다는 의미입니다.)
+            3. 만약 iframe 태그 안에 width, height가 지정되어 있지 않거나, frame 클래스가 적용되어있지 않다면, 영상비율에 맞춰서 가로세로 비율이 조정되는 기능을 사용하실 수 없습니다.
+            -->
+            <!-- <iframe class="frame" width="288" height="180" src="https://www.youtube.com/embed/78tdk2JCA8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            <img src="img/p1_img/1.png"> -->
+
+        </div>
+    </div>
+
+
+    <script>
+
+        //비디오 비율 조정------------------------------------------------------------
+        function set_video_ratio() {
+            let vids = document.getElementsByClassName("frame");
+
+            for (let i = 0; i < vids.length; i++) {
+                let vid_h = vids[i].height; 
+                let vid_w = vids[i].width;
+                vids[i].style.height = $(vids[i]).width() * vid_h / vid_w + 'px';
+            }
+        }
+
+        set_video_ratio();
+
+        window.addEventListener('resize', set_video_ratio);
+        //------------------------------------------------------------------------
+
+    </script>
+
+</body>
+
+</html>
