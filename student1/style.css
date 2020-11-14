@@ -231,6 +231,7 @@ frame 클래스는 영상 임베드를 불러오는데 사용된 iframe의 가�
 
 .frame{
     width: 100%;  
+    margin-bottom: 12px;
 }
 
 /* .btn-like {
@@ -252,7 +253,20 @@ text-align: center;
  column-count: 2;  
 
 }
+.columns3{
+
+    text-align: center;
+     column-count: 3;  
+    
+    }
 .columns figure{
+    display: inline-block;
+    width:100%;
+    height:auto;
+    margin:0;
+
+}
+.columns3 figure{
     display: inline-block;
     width:100%;
     height:auto;
@@ -306,6 +320,7 @@ text-align: center;
     height:5px; 
     /* width:50%; */
     padding-bottom:50px;
+   
   
   /* } */
 /*----------------Mobile--------------------*/
@@ -340,7 +355,7 @@ text-align: center;
     }
     
     .headerRight a {
-        width: 48.75%; /* 총 작품이 3개일 경우 32.5%로 수정 */
+        width: 32.5%; /* 총 작품이 3개일 경우 32.5%로 수정 */
         padding: 0px;
         padding-top: 12px;
         box-sizing: border-box;
@@ -368,5 +383,7 @@ text-align: center;
         padding-bottom: 32px;
     }
 
-
+    .columns figcaption{ 
+        font-size: 10px;
+    }
 }
