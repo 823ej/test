@@ -108,7 +108,7 @@ button:hover {
 }	
 
 #reLoad {	
-    top: 10px; /* 새로고침 버튼의 위치 조정 */	
+    top: 70%; /* 새로고침 버튼의 위치 조정 */	
     left: 50%; /* 가운데 정렬을 위한 왼쪽 위치 조정 */	
     transform: translateX(-50%); /* 가운데 정렬을 위한 transform */	
 }	
