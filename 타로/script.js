@@ -4,34 +4,53 @@ async function loadTarotData() {
     return response.json();
 }
 
-let shownResult = false;
-
-function pickup_click() {
-    if (shownResult) return; // 이미 결과를 보여준 경우, 더 이상 동작하지 않음
-    shownResult = true;
-
-    let cardNumbers = [1, 2, 3];
-    cardNumbers.forEach(async cardNumber => {
-        let cardImageElement = document.getElementById(`pick${cardNumber}`);
-        let resultTextElement = document.getElementById(`pick${cardNumber}Text`);
-
-        // JSON 데이터를 불러오기
-        const tarotData = await loadTarotData();
-
-        // 랜덤한 카드 번호를 가져오고, 역방향 여부에 따라 결과 설정
-        let cardIndex = getRandomCard();
-        let cardData = tarotData.past; // 예시로 과거 데이터 사용
-
-        if (cardData.reversed && cardData.reversed.hasOwnProperty(cardIndex.toString())) {
-            resultTextElement.textContent = cardData.reversed[cardIndex];
-            // 역방향 카드 이미지로 설정하고, 이미지를 뒤집기 위한 CSS 클래스 추가
-            cardImageElement.src = `img/card${cardIndex}.png`;
-            cardImageElement.classList.add('reversed'); // CSS에서 정의한 클래스 이름
-        } else {
-            resultTextElement.textContent = cardData[cardIndex];
-            // 정방향 카드 이미지로 설정
-            cardImageElement.src = `img/card${cardIndex}.png`;
+// 3개의 고유한 숫자를 생성하는 함수
+function letsPickTheNum() {
+    let IndexNum = [];
+    while (IndexNum.length < 3) {
+        let n = Math.floor(Math.random() * 21);
+        if (!IndexNum.includes(n)) {
+            IndexNum.push(n);
         }
-    });
+    }
+    return IndexNum;
 }
 
+// 전역 변수
+var boolPast = true;
+var num = letsPickTheNum();
+var tarotData = null;
+
+// 페이지 로드 시 JSON 데이터를 불러옴
+window.onload = async function() {
+    tarotData = await loadTarotData();
+};
+
+function pickup_click() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("layout0").style.display = "inline-block";
+    document.getElementById("layout1").style.display = "inline-block";
+    document.getElementById("layout2").style.display = "inline-block";
+}
+
+// 카드 클릭 시 처리하는 함수
+function cardClick(cardIndex) {
+    if (!tarotData) return;
+
+    const cardIds = ["pick1", "pick2", "pick3"];
+    const textIds = ["textSpace1", "textSpace2", "textSpace3"];
+    const timePeriods = ["past", "present", "future"];
+    
+    const ForR = Math.random() < 0.5;
+
+    const imgElement = document.getElementById(cardIds[cardIndex]);
+    const textElement = document.getElementById(textIds[cardIndex]);
+    
+    imgElement.src = `img/${num[cardIndex]}.png`;
+    const direction = ForR ? "upright" : "reversed";
+    textElement.innerText = tarotData[num[cardIndex]][direction][timePeriods[cardIndex]];
+    
+    if (!ForR) {
+        imgElement.style.transform = "rotate(180deg)";
+    }
+}
