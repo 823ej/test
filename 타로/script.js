@@ -1,6 +1,6 @@
 // JSON 파일을 불러오는 함수
 async function loadTarotData() {
-    const response = await fetch('fortune.json');
+    const response = await fetch('tarot.json');
     return response.json();
 }
 
