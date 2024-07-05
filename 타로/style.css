@@ -3,53 +3,48 @@ html, body {
     padding: 0;
     text-align: center;
 }
-
-button {
-    width: 120px;
-    height: 40px;
-    color: #fff;
-    background: #000000;
-    font-size: 16px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-    transition: 0.3s;
-    position: absolute;
-    transform: translate(-50%,-50%);
+button{
+   
+	width:120px;
+	height: 40px;
+	color:#fff;
+	background: #000000;
+	font-size: 16px;
+	border:none;
+	border-radius: 20px;
+	box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+	transition:0.3s;
+	position: absolute;
+	
+	transform: translate(-50%,-50%);
 }
-
 button:focus {
-    outline: 0;
+	outline:0;
 }
-
-button:hover {
-    background: rgba(0,0,0,0.9);
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+button:hover{
+	background: rgba(0,0,0,0.9);
+	cursor: pointer;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
-
-.upperBox {
+.upperBox{
     margin-top: 50px;
 }
-
-.container {
+.container{
     text-align: center;
     margin-top: 60px;
     margin-bottom: 40px;
 }
-
-.card-box {
+.card-box{
     position: relative;
     border-radius: 11px;
     overflow: hidden;
     display: inline-block;
-    width: 100%;
+    width:100%;
     max-width: 221px;
-    height: 404px;
+    height:404px;
     box-shadow: 0 20px 35px rgba(0,0,0,0.26);
 }
-
-.img-gradient {
+.img-gradient{
     opacity: 0;
     position: absolute;
     left: 0;
@@ -60,47 +55,46 @@ button:hover {
     z-index: 1;
     transition: 0.3s ease;
 }
-
-.card-box:hover .img-gradient {
+.card-box:hover .img-gradient{
     opacity: 1;
 }
-
-.card-box:hover .text-wrap {
+.card-box:hover .text-wrap{
     opacity: 1;
 }
-
-.card-box:hover {
+.card-box:hover{
     box-shadow: 0 3px 4px rgba(0,0,0,0.5);
     transform: scale(0.95);
     transition: 0.3s;
 }
-
-.card-box img {
-    width: inherit;
-    height: inherit;
+.card-box img{
+    width:inherit;
+    height:inherit;
 }
-
-.text-wrap {
+.reversed {
+    transform: scaleY(-1); /* Y축을 기준으로 이미지를 뒤집음 */
+}
+.text-wrap{
     opacity: 0;
     position: absolute;
     bottom: 0;
     padding: 24px;
     z-index: 2;
 }
+.text-wrap h1{
 
-.text-wrap h1 {
-    color: #FFF;
+    color:#FFF;
     font-size: 24px;
     margin-bottom: 8px;
     font-weight: bold;
 }
+.text-wrap p{
 
-.text-wrap p {
     color: #FFF;
     font-size: 11px;
     line-height: 1.5;
 }
 
-#layout0, #layout1, #layout2, #reLoad {
+#layout0, #layout1, #layout2, #reLoad{
     display: none;
 }
+
