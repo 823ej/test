@@ -9,7 +9,7 @@ async function loadTarotData() {
 function generateUniqueNumbers() {
     let uniqueNumbers = []; // 고유한 숫자를 저장할 배열을 선언합니다.
     while (uniqueNumbers.length < 3) {
-        let n = Math.floor(Math.random() * 22); // 0부터 21까지의 랜덤 숫자를 생성합니다.
+        let n = Math.floor(Math.random() * 21); // 0부터 20까지의 랜덤 숫자를 생성합니다.
         // 배열에 이미 포함된 숫자가 아닌 경우에만 배열에 추가합니다.
         if (!uniqueNumbers.includes(n)) {
             uniqueNumbers.push(n); // 중복되지 않는 숫자만 배열에 추가합니다.
