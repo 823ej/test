@@ -70,6 +70,9 @@ button:hover{
     width:inherit;
     height:inherit;
 }
+.reversed {
+    transform: scaleY(-1); /* Y축을 기준으로 이미지를 뒤집음 */
+}
 .text-wrap{
     opacity: 0;
     position: absolute;
@@ -94,3 +97,4 @@ button:hover{
 #layout0, #layout1, #layout2, #reLoad{
     display: none;
 }
+
