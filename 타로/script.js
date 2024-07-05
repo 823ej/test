@@ -25,6 +25,7 @@ var tarotData = null; // 타로 카드 데이터를 저장할 변수를 선언�
 // 페이지가 로드될 때 JSON 데이터를 불러옵니다.
 window.onload = async function() {
     tarotData = await loadTarotData(); // 타로 데이터를 비동기적으로 로드합니다.
+    console.log(tarotData)
 };
 
 // 카드 뽑기 버튼을 클릭하면 실행되는 함수
