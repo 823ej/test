@@ -1,4 +1,4 @@
- // JSON 파일을 불러오는 함수
+// JSON 파일을 불러오는 함수
 async function loadTarotData() {
     const response = await fetch('tarot.json');
     return response.json();
@@ -46,7 +46,7 @@ function cardClick(cardIndex) {
     const imgElement = document.getElementById(cardIds[cardIndex]);
     const textElement = document.getElementById(textIds[cardIndex]);
     
-    imgElement.src = img/num[cardIndex].png;
+    imgElement.src = img/${num[cardIndex]}.png;
     const direction = ForR ? "upright" : "reversed";
     textElement.innerText = tarotData[num[cardIndex]][direction][timePeriods[cardIndex]];
     
