@@ -1,9 +1,10 @@
-let shownResult = false;
-
+// JSON 파일을 불러오는 함수
 async function loadTarotData() {
-    const response = await fetch('fortune.json');
+    const response = await fetch('tarot.json');
     return response.json();
 }
+
+let shownResult = false;
 
 function pickup_click() {
     if (shownResult) return; // 이미 결과를 보여준 경우, 더 이상 동작하지 않음
@@ -33,3 +34,4 @@ function pickup_click() {
         }
     });
 }
+
