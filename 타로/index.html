@@ -8,11 +8,11 @@
 </head>
 <body>
     <div class="upperBox" id="announOrrePlay">
-        <h2>타로 한 번 보실래요?11</h2>
+        <h2>타로 한 번 보실래요?</h2>
         <button id="reLoad" onClick="window.location.reload()">새로고침</button>
     </div>   
     
-    <div class="container" id="pickup" onclick="pickup_click();">
+    <div class="container" id="pickup" onclick="pickupCards();">
         <div class="card-box" id="home">
             <div class="img-gradient"></div>
             <img src="img/back.png" alt="클릭">
@@ -21,7 +21,7 @@
                 <h1>CLICK!</h1>
             </div>
         </div>
-        <div id="layout0" style="display:none;">
+        <div id="layout0" class="card-layout">
             <div class="card-box" onclick="cardClick(0);">
                 <div class="img-gradient" id="pick1Text"></div>
                 <img id="pick1" src="img/back.png" alt="">
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div id="layout1" style="display:none;">
+        <div id="layout1" class="card-layout">
             <div class="card-box" onclick="cardClick(1);">
                 <div class="img-gradient" id="pick2Text"></div>
                 <img id="pick2" src="img/back.png" alt="">
@@ -41,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div id="layout2" style="display:none;">
+        <div id="layout2" class="card-layout">
             <div class="card-box" onclick="cardClick(2);">
                 <div class="img-gradient" id="pick3Text"></div>
                 <img id="pick3" src="img/back.png" alt="">
