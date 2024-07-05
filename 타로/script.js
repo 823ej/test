@@ -1,3 +1,10 @@
+// JSON 파일을 불러오는 함수
+async function loadTarotData() {
+    const response = await fetch('tarot.json');
+    return response.json();
+}
+
+// 3개의 고유한 숫자를 생성하는 함수
 function letsPickTheNum() {
     let IndexNum = [];
     while (IndexNum.length < 3) {
@@ -9,28 +16,41 @@ function letsPickTheNum() {
     return IndexNum;
 }
 
-var boolPast = true; 
+// 전역 변수
+var boolPast = true;
 var num = letsPickTheNum();
+var tarotData = null;
+
+// 페이지 로드 시 JSON 데이터를 불러옴
+window.onload = async function() {
+    tarotData = await loadTarotData();
+};
 
 function pickup_click() {
     document.getElementById("home").style.display = "none";
-    ["layout0", "layout1", "layout2"].forEach(id => {
-        document.getElementById(id).style.display = "inline-block";
-    });
+    document.getElementById("layout0").style.display = "inline-block";
+    document.getElementById("layout1").style.display = "inline-block";
+    document.getElementById("layout2").style.display = "inline-block";
+}
 
-    const directions = [Math.floor(Math.random() * 2), Math.floor(Math.random() * 2), Math.floor(Math.random() * 2)];
+// 카드 클릭 시 처리하는 함수
+function cardClick(cardIndex) {
+    if (!tarotData) return;
 
-    const handleClick = (index, elementId, imgId, textId, direction, timeFrame) => {
-        document.getElementById(elementId).onclick = function() {
-            document.getElementById(imgId).src = `img/${num[index]}.png`;
-            boolPast = false;
-            const directionText = direction ? "역방향" : "";
-            this.style.transform = direction ? "rotate(180deg)" : "";
-            document.getElementById(textId).innerText = `${timeFrame}${directionText}-${num[index]}`;
-        };
-    };
+    const cardIds = ["pick1", "pick2", "pick3"];
+    const textIds = ["textSpace1", "textSpace2", "textSpace3"];
+    const timePeriods = ["past", "present", "future"];
+    
+    const ForR = Math.random() < 0.5;
 
-    handleClick(0, "layout0", "pick1", "textSpace1", directions[0], "과거");
-    handleClick(1, "layout1", "pick2", "textSpace2", directions[1], "현재");
-    handleClick(2, "layout2", "pick3", "textSpace3", directions[2], "미래");
+    const imgElement = document.getElementById(cardIds[cardIndex]);
+    const textElement = document.getElementById(textIds[cardIndex]);
+    
+    imgElement.src = `img/${num[cardIndex]}.png`;
+    const direction = ForR ? "upright" : "reversed";
+    textElement.innerText = tarotData[num[cardIndex]][direction][timePeriods[cardIndex]];
+    
+    if (!ForR) {
+        imgElement.style.transform = "rotate(180deg)";
+    }
 }
